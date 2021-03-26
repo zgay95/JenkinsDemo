@@ -1,0 +1,11 @@
+// Jenkinsfile (Scripted Pipeline)
+
+//Globals
+def script
+
+node { 
+  script = load "script.groovy"
+  script.BuildApp()
+  script.TestApp()
+  script.DeployApp()
+}
